@@ -1,25 +1,46 @@
-import logo from './logo.svg';
+import  SmartChat  from "./Components/SmartChat";
 import './App.css';
+// import Chatbot from 'react-chatbot-kit'
 
-function App() {
+
+
+function App() 
+
+{
+
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    
+
+<>
+
+
+
+<button class="open-button" onClick={openForm}>Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onClick={closeForm}>Close</button>
+  </form>
+</div>
+
+{/* <SmartChat/> */}
+</>
+
   );
 }
-
 export default App;
