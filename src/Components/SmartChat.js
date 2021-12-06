@@ -13,14 +13,17 @@ export default function SmartArticles() {
   }, [Aos]);
   return (
     <>
-{/* 
+
+
+
+
        <DummyChat
           msgIntro={"Olá, eu sou ChatMaira, tudo bem? Para começarmos, preciso saber seu nome inteiro."}
           msgGreeting={"Agora que sei seu nome, qual a cidade e estado que cocê mora"}
-          msgData={"Legal, agora que sabemos sua cidade e estado. Quando foi que você nasceu?"}
-          msgEmail={"Agora me fala teu email, por gentileza?"}
-          msgFinal={"Você finalizou o teste. Faça uma avaliação sobre o processo que realizou até chegar aqui. Nós agradecemos! "}
-        /> */}
+          // msgData={"Legal, agora que sabemos sua cidade e estado. Quando foi que você nasceu?"}
+          // msgEmail={"Agora me fala teu email, por gentileza?"}
+          // msgFinal={"Você finalizou o teste. Faça uma avaliação sobre o processo que realizou até chegar aqui. Nós agradecemos! "}
+        />
 
 
 
