@@ -39,55 +39,50 @@ export function DummyChat(
 
     return (      
       <>
+​<button class="open-button" onClick={openForm}>Start the Chat</button>
 
+​    <button class="btn cancel" onClick={closeForm}>Close the chat</button>
+<div class="container content" id = 'myForm' style={{display: 'none'}}>
 
-<button class="open-button" onClick={openForm}>Chat</button>
-
-<div class='form-container'> 
-<div class="chat-popup" id="myForm">
-  {/* <form  class="form-container"> */}
-    <h1>ChatMaira</h1>
-
-    <input 
-    placeholder="Nome e sobrenome"  
-    onKeyDown={handleKeyDown} 
-
-    onInput={e => setUserInput(e.target.value)} />
-
-
- <button onClick={handleClick} > 
- <i class="fa fa-play" style={{fontSsize:"24px"}}></i>
- </button>
-
-    <div><span><b>{msgIntro}</b></span></div>
-    {/* <textarea placeholder="Nome e sobrenome" name="msg" required></textarea> */}
-    
-    {submit && <div> Que satisfacao! </div>}
-  
-      {submit &&<div> {userInput} </div>}
-
-      {submit && <div>{msgGreeting}</div> }
-
-
-      <input 
-    placeholder="Cidade e Estado"  
-    onKeyDown={handleKeyDown} 
-
-    onInput={e => setUserInput(e.target.value)} />
-
-
- <button onClick={handleClick} > 
- <i class="fa fa-play" style={{fontSsize:"24px"}}></i>
- </button>
-
-    <button class="btn">Send</button>
-    <button class="btn cancel" onClick={closeForm}>Close</button>
-  {/* </form> */}
-
-
+    <div class="row">
+        <div>
+        	<div class="card">
+        		<div class="card-header">Maira-Chat</div>
+        		<div class="card-body height3">
+        			<ul class="chat-list">
+        				<li class="in">
+        					<div class="chat-img">
+        						<img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar3.png"/>
+        					</div>
+        					<div class="chat-body">
+        						<div class="chat-message">
+        							<h5>Maira-Chat</h5>
+        							<p>{msgIntro}</p>
+        						</div>
+        					</div>
+        				</li>
+        				<li class="out">
+        					<div class="chat-img">
+        						<img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar6.png"/>
+        					</div>
+        					<div class="chat-body">
+        						<div class="chat-message">
+        							<h5>Serena</h5>
+        							<p>Next level veard</p>
+        						</div>
+        					</div>
+        				</li>
+        				<li class="in">
+        					
+        				</li>
+        			</ul>
+        		</div>
+        	</div>
+        </div>
+       
+       </div>
 </div>
 
-</div>
 
 
 
