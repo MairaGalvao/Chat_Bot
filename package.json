@@ -10,6 +10,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "aos": "^2.3.4",
+    "firebase-tools": "^9.23.1",
     "formik": "^2.2.9",
     "react": "^17.0.2",
     "react-chatbot-kit": "^2.0.1",
@@ -43,3 +44,4 @@
     ]
   }
 }
+
