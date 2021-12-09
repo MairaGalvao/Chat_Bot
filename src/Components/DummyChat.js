@@ -129,32 +129,35 @@ function displayStars() {
 
     return (      
       <>
-{/* ​<button class="btn cancel" onClick={openForm}>Start the Chat</button>
-<button class="btn cancel" onClick={closeForm}>Close the chat</button> */}
+ {/* ​<button class="btn cancel" onClick={openForm}>Start the Chat</button>
+<button class="btn cancel" onClick={closeForm}>Close the chat</button>  */}
+
+
 
 <div class="container content" id = 'myForm' style={{display:'block'}} >
-    <div class="row" >
-        <div>
-          
-        	<div class="card" id='boxName'>
-        		<div class="card-header">Maira-Chat</div>
-        		<div class="card-body height3">
-        			<ul class="chat-list">
-        				<li class="in">
-        					<div class="chat-img">
-        						<img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar3.png"/>
-        					</div>
-        					<div class="chat-body">
-        						<div class="chat-message">
-        							<h5>Maira-Chat</h5>
+      <div class="row" >
+          <div>
+             	<div class="card" id='boxName'>
+        	      	<div class="card-header">Maira-Chat</div>
+        		
+            <div class="card-body height3">
+        			  <ul class="chat-list">
+        				  <li class="in">
+        					  <div class="chat-img">
+        						  <img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar3.png"/>
+        					  </div>
+        		    <div class="chat-body">
+        					<div class="chat-message">
+        					  <h5>Maira-Chat</h5>
         							<p>{msgIntro}</p>
-        						</div>
         					</div>
+        				</div>
         				</li>
         				<li class="out">
         					<div class="chat-img">
         						<img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar6.png"/>
         					</div>
+ 
  
                   
 <div class="chat-body">
@@ -179,43 +182,28 @@ function displayStars() {
 
               <div class="card-body height3" id='chat2'  style={{display:'none'}}>
         			<ul class="chat-list" >
-        				<li class="in">
+
+
+
+                  <li class="in">
         					<div class="chat-img">
         						<img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar3.png"/>
         					</div>
-
-                  <li class="out">
-        					<div class="chat-img">
-        						<img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar6.png"/>
-        					</div>
- 
-                  </li>
-<div class="chat-body">
-        						<div class="chat-message">
-
-​    <input 
-    placeholder="Nome e sobrenome"  
-    onKeyDown={handleKeyDown1}
-
-    onInput={e => setUserInput(e.target.value)} />
-
-    
-</div>
-</div> 
         					<div class="chat-body">
         						<div class="chat-message">
         							<h5>Maira-Chat</h5>
-                      ​    {submit && <p> Que satisfacao! </p>}     {submit &&<p> {userInput} </p>}{submit && <p>{msgGreeting}</p> }
-
+        							<p>{msgIntro}</p>
         						</div>
         					</div>
-
-        				</li>
-
+        				
 
 
         				</li>
+                
                 </ul>
+
+
+                
 
                 <div class="card-body height3" id='chat3'style={{display:'none'}}>
         			<ul class="chat-list">
@@ -230,16 +218,27 @@ function displayStars() {
         						</div>
         					</div>
         				</li>
-        				<li class="out">
+                <li class="out">
         					<div class="chat-img">
         						<img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar6.png"/>
         					</div>
-                  ​      <input
-    placeholder="Cidade e Estado"  
-    onKeyDown={handleKeyDown3}
-  
+ 
+                  
+<div class="chat-body">
+        						<div class="chat-message">
+
+​    <input 
+
+    onKeyDown={handleKeyDown1}
+type='date'
     onInput={e => setUserInput(e.target.value)} />
-                  </li>
+
+    
+</div>
+</div> 
+
+
+        				</li>
                   </ul> 
 
 
@@ -278,11 +277,7 @@ function displayStars() {
 </div>
 </div>
 
-​                 ​      <input
-    placeholder="Cidade e Estado"  
-    onKeyDown={handleKeyDown3}
-  
-    onInput={e => setUserInput(e.target.value)} />
+​                 ​
 
                   </li>
                   </ul> 
