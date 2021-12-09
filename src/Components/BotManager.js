@@ -7,26 +7,6 @@ import "../App.css";
 import axios from "axios";
 
 export default function BotManager() {
-  const products = ["Product 1", "Product 2", "Product 3", "Product 4"];
-  const validationSchema = Yup.object({
-    product: Yup.string().required("Please select a product").oneOf(products),
-    name: Yup.string().required(),
-    email: Yup.string().email().required(),
-
-    rating: Yup.number().min(1).max(10).required(),
-    date: Yup.date().default(() => new Date()),
-    wouldRecommend: Yup.boolean().default(false),
-  });
-
-  const initialValues = {
-    name: "",
-    email: "",
-    rating: "",
-    date: new Date(),
-    wouldRecommend: false,
-    product: "",
-  };
-
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [name, setName] = useState("");
   const [arrayAnswers, setArrayAnswers] = useState([]);
@@ -58,12 +38,31 @@ export default function BotManager() {
         arrayAnswers,
       },
     });
-    console.log("api call clicked");
-    console.log(arrayAnswers);
   }
+
+  const validationSchema = Yup.object({
+    product: Yup.string()
+      .required("Please select a product")
+      .oneOf(arrayAnswers),
+    name: Yup.string().required(),
+    email: Yup.string().email().required(),
+
+    rating: Yup.number().min(1).max(10).required(),
+    date: Yup.date().default(() => new Date()),
+    wouldRecommend: Yup.boolean().default(false),
+  });
+
+  const initialValues = {
+    name: "",
+    email: "",
+    rating: "",
+    date: new Date(),
+    wouldRecommend: false,
+    product: "",
+  };
   return (
     <>
-      {/* <Customer onSubmit ={onSubmit} /> */}​
+      ​
       <button class="chatbox-open" id="chat" onClick={displayBot}>
         <i class="fa fa-comment fa-2x" aria-hidden="true"></i>
       </button>
@@ -81,9 +80,6 @@ export default function BotManager() {
                     <section class="chatbox-popup">
                       <header class="chatbox-popup__header">
                         <aside>
-                          {/* <i class="fa fa-user-circle fa-4x chatbox-popup__avatar" aria-hidden="true"></i>
-                           */}
-
                           <img
                             alt="Avtar"
                             src="https://bootdey.com/img/Content/avatar/avatar3.png"
