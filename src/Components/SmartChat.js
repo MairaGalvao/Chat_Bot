@@ -42,6 +42,8 @@ export default function SmartArticles() {
                     <h3 class="box-title">Chat Messages</h3>
                     <div class="box-tools pull-right"> <span data-toggle="tooltip" title="" class="badge bg-yellow" data-original-title="3 New Messages">20</span> <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i> </button> <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="" data-widget="chat-pane-toggle" data-original-title="Contacts"> <i class="fa fa-comments"></i></button> <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i> </button> </div>
                 </div>
+
+                
                 <div class="box-body">
                     <div class="direct-chat-messages">
                         <div class="direct-chat-msg">

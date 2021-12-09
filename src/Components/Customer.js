@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Formik, Field, Form } from "formik";
 
 export default function Customer({
@@ -12,7 +13,6 @@ export default function Customer({
         initialValues={{}}
         onSubmit={(values) => {
           const jsonValues = JSON.stringify(values, null, 1);
-          console.log(jsonValues);
           onSubmit(jsonValues);
         }}
       >
@@ -21,9 +21,12 @@ export default function Customer({
             name={questionNumber}
             type={fieldType}
             placeholder={placeholder}
+
           />
+      <button type="submit">Send</button>
         </Form>
       </Formik>
+
     </>
   );
 }
