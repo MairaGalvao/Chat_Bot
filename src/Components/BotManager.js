@@ -6,21 +6,13 @@ import '../App.css';
 import '../BotManager.css';
 import * as Yup from "yup";
 
-
-
-
 export default function BotManager () {
-
-
-
     const products = ["Product 1", "Product 2", "Product 3", "Product 4"];
-
     const validationSchema = Yup.object({
       product: Yup.string().required("Please select a product").oneOf(products),
       name: Yup.string().required(),
       email: Yup.string().email().required(),
-      title: Yup.string().required(),
-      review: Yup.string().required(),
+
       rating: Yup.number().min(1).max(10).required(),
       date: Yup.date().default(() => new Date()),
       wouldRecommend: Yup.boolean().default(false),
